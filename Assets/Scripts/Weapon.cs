@@ -11,12 +11,15 @@ public class Weapon : MonoBehaviour {
 	public Transform bulletTransform;
 	public Transform MuzzleFlash;
     public Transform hitPrefab;
-
-
 	float timeToSpawnEffect = 0;
 	public float effectSpawnRate = 10;
 
-	float timeToFire = 0f;
+    // Handle camera shaking
+    public float camShakeAmt = 0.05f;
+    public float camShakeLength = 0.1f;
+    CameraShake camShake;
+
+    float timeToFire = 0f;
 	Transform firePoint;
 
 	// Use this for initialization
@@ -27,9 +30,16 @@ public class Weapon : MonoBehaviour {
 			Debug.LogError("Fire Point not found.");
 
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    void Start()
+    {
+        camShake = GameMaster.gm.GetComponent<CameraShake>();
+        if (camShake == null)
+            Debug.LogError("No CameraShake script found on GM object.");
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 		// regular shooting
 		if(fireRate == 0)
@@ -118,5 +128,8 @@ public class Weapon : MonoBehaviour {
 		float size = Random.Range(0.6f, 0.9f);
 		clone.localScale = new Vector3(size, size, size);
 		Destroy(clone.gameObject, 0.02f);
-	}
+
+        //Shake the camera
+        camShake.Shake(camShakeAmt, camShakeLength);
+    }
 }
