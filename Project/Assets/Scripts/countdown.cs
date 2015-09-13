@@ -17,7 +17,7 @@ public class countdown : MonoBehaviour {
     void Update()
     {
         float time = CountdownFrom - Time.timeSinceLevelLoad;
-        CountdownText.text = "Time left: " + time.ToString("0") + "s";
+        CountdownText.text = time.ToString("0");
 
         if (time <= 0f)
         {
