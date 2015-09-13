@@ -2,12 +2,9 @@
 2D Platformer
 
 Known bugs:
-- Enemy wrongly chasing the player's prefab.
-- Countdown not displayed during game.
+N/A
 
 To do:
-- Fix enemy pathfinding.
-- Fix countdown.
 - Optimize the project.
 - Add special drop system to the enemy as rewards for playing.
 - Add new art style.
