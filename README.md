@@ -7,6 +7,7 @@ N/A
 To do:
 - Optimize the project.
 - Add special drop system to the enemy as rewards for playing.
+- Add audio.
 - Add new art style.
 
 Tutorial assets:
