@@ -2,9 +2,13 @@
 using System.Collections;
 using System.Security.Cryptography;
 
+[RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour {
 
-	public float fireRate = 0f;
+    public AudioClip impact;
+    AudioSource audio;
+
+    public float fireRate = 0f;
 	public int damage = 10;
 	public LayerMask toHit;
 
@@ -33,6 +37,7 @@ public class Weapon : MonoBehaviour {
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         camShake = GameMaster.gm.GetComponent<CameraShake>();
         if (camShake == null)
             Debug.LogError("No CameraShake script found on GM object.");
@@ -47,7 +52,8 @@ public class Weapon : MonoBehaviour {
 			if(Input.GetButtonDown("Fire1"))
 			{
 				Shoot();
-			}
+                audio.PlayOneShot(impact, 0.7F);
+            }
 		}
 
 		// burst shooting

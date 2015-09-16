@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+//using System.Collections.Generic;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class WaveSpawner : MonoBehaviour
     private float waveCountdown;
 
     private float searchCountdown = 1f;
+
+    /*public List<Transform> items = new List<Transform>();
+    public Transform ItemSpawnPoint;
+    public GameObject Item1;*/
 
     private SpawnState state = SpawnState.COUNTING;
 
@@ -74,6 +79,9 @@ public class WaveSpawner : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
+            /*Instantiate(Item1, ItemSpawnPoint.position, ItemSpawnPoint.rotation);
+            GameObject clone = Instantiate(ItemSpawnPoint, ItemSpawnPoint.position, ItemSpawnPoint.rotation) as GameObject;
+            Destroy(clone, 3f);*/
             Debug.Log("ALL WAVES COMPLETE! Looping...");
         }
         else

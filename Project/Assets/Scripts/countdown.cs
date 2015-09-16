@@ -10,11 +10,12 @@ public class countdown : MonoBehaviour {
     public Text CountdownText;
 
     void Start() {
-        GetComponent<AudioSource>().Play();
+
         if (CountdownText == null) {
             Debug.LogError("STATUS INDICATOR: No text object referenced!");
         }
     }
+
     void Update()
     {
         float time = CountdownFrom - Time.timeSinceLevelLoad;
