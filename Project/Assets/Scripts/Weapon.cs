@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 public class Weapon : MonoBehaviour {
 
     public AudioClip impact;
-    AudioSource audio;
+    //AudioSource audio;
 
     public float fireRate = 0f;
 	public int damage = 10;
@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour {
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
         camShake = GameMaster.gm.GetComponent<CameraShake>();
         if (camShake == null)
             Debug.LogError("No CameraShake script found on GM object.");
@@ -52,7 +52,7 @@ public class Weapon : MonoBehaviour {
 			if(Input.GetButtonDown("Fire1"))
 			{
 				Shoot();
-                audio.PlayOneShot(impact, 0.7F);
+                GetComponent<AudioSource>().PlayOneShot(impact, 0.7f);
             }
 		}
 
