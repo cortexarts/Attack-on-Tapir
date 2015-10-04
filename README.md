@@ -2,9 +2,11 @@
 2D Platformer
 
 Known bugs:
-N/A
+- Audio triggered by player not playing.
 
 To do:
+- Add intro GUI (audio switch, menu etc.).
+- fix bugs.
 - Optimize the project.
 - Add special drop system to the enemy as rewards for playing.
 - Add audio.
