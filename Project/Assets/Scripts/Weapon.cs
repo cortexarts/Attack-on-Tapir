@@ -83,6 +83,7 @@ public class Weapon : MonoBehaviour {
 	        Enemy enemy = hit.collider.GetComponent<Enemy>();
 	        if (enemy != null)
 	        {
+                Debug.Log("Damage given: " + damage);
 	            enemy.DamageEnemy(damage);
 	        }
 	    }
