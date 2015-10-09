@@ -85,7 +85,7 @@ public class Weapon : MonoBehaviour {
 	        {
                 Debug.Log("Damage given: " + damage);
 	            enemy.DamageEnemy(damage);
-	        }
+            }
 	    }
 
         if (Time.time >= timeToSpawnEffect)

@@ -73,4 +73,7 @@ public class Enemy : MonoBehaviour
             DamageEnemy(9999999);
         }
     }
+    void Update() {
+        Debug.Log("Enemy health: " + stats.curHealth);
+    }
 }
