@@ -85,6 +85,21 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34311900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 140332, guid: a8f125799f4683a48af91201f88a54bd, type: 2}
+  m_PrefabInternal: {fileID: 541573299}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 662834613}
+  m_Layer: 0
+  m_Name: PlayerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1319202362, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &139960435
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,42 +122,38 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11470120, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: impact
-      value: 
-      objectReference: {fileID: 8300000, guid: a0f82fad0da3f96408c871b0909361db, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b675480f1f627f47812b81e89276069, type: 2}
   m_IsPrefabParent: 0
@@ -224,80 +235,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!1 &289081626 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 153462, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-  m_PrefabInternal: {fileID: 190852113}
---- !u!82 &289081630
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 289081626}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0f82fad0da3f96408c871b0909361db, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &376889053
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +637,7 @@ MonoBehaviour:
   reverseScale: 1
 --- !u!4 &539854359 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+  m_PrefabParentObject: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
   m_PrefabInternal: {fileID: 190852113}
 --- !u!1001 &541573299
 Prefab:
@@ -965,10 +902,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651180015}
---- !u!4 &662834613 stripped
+--- !u!4 &662834613
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 469520, guid: a8f125799f4683a48af91201f88a54bd, type: 2}
   m_PrefabInternal: {fileID: 541573299}
+  m_GameObject: {fileID: 34311900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.9200001, y: .379999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1811164683}
+  m_RootOrder: 0
 --- !u!1 &701493774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,7 +1734,7 @@ MonoBehaviour:
     count: 2
     rate: 1
   - name: Invasion2
-    enemy: {fileID: 470562, guid: fe166c20e85b1d8448f3672d1ddf5bb2, type: 2}
+    enemy: {fileID: 492376, guid: 1570f968ae13b194f9571fe832e433c2, type: 2}
     count: 1
     rate: 1.5
   spawnPoints:
@@ -1893,7 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea751f89e9e0ed4db162b5029719c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 498260, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+  playerPrefab: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
   spawnPoint: {fileID: 662834613}
   spawnDelay: 3.4000001
   spawnPrefab: {fileID: 400000, guid: 8de073d3db26cb048bc0d12e60a2ef45, type: 2}

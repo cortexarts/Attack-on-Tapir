@@ -2,7 +2,6 @@
 2D Platformer
 
 Known bugs:
-- Audio triggered by player not playing.
 - FinalBoss doesn't drop the correct "deathparticles" and has a wrongly functioning health script.
 
 To do:

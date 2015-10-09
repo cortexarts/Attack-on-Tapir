@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
         stats.curHealth -= damage;
         if (stats.curHealth <= 0)
         {
+            Debug.Log("Enemy health: " + stats.curHealth);
             GameMaster.KillEnemy(this);
         }
 
@@ -69,11 +70,9 @@ public class Enemy : MonoBehaviour
         Player _player = _colInfo.collider.GetComponent<Player>();
         if (_player != null)
         {
+            Debug.Log("Enemy health: " + stats.curHealth);
             _player.DamagePlayer(stats.damage);
             DamageEnemy(9999999);
         }
-    }
-    void Update() {
-        Debug.Log("Enemy health: " + stats.curHealth);
     }
 }
