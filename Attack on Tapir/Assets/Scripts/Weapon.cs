@@ -81,12 +81,18 @@ public class Weapon : MonoBehaviour {
 	    {
 	        Debug.DrawLine(firePointPos, hit.point, Color.red);
 	        Enemy enemy = hit.collider.GetComponent<Enemy>();
+            FinalBoss FinalBoss = hit.collider.GetComponent<FinalBoss>();
 	        if (enemy != null)
 	        {
                 Debug.Log("Damage given: " + damage);
 	            enemy.DamageEnemy(damage);
             }
-	    }
+            if (FinalBoss != null)
+            {
+                Debug.Log("Damage given: " + damage);
+                FinalBoss.DamageEnemy(damage);
+            }
+        }
 
         if (Time.time >= timeToSpawnEffect)
         {

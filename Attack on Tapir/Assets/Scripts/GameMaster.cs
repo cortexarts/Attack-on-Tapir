@@ -81,4 +81,17 @@ public class GameMaster : MonoBehaviour
         Destroy(_enemy.gameObject);
     }
 
+    public static void KillFinalBoss(FinalBoss FinalBoss)
+    {
+        gm._KillFinalBoss(FinalBoss);
+    }
+    public void _KillFinalBoss(FinalBoss _FinalBoss)
+    {
+        GameObject _clone = Instantiate(_FinalBoss.deathParticles, _FinalBoss.transform.position, Quaternion.identity) as GameObject;
+        Instantiate(_FinalBoss.reward, _FinalBoss.transform.position, Quaternion.identity);
+        Destroy(_clone, 5f);
+        cameraShake.Shake(_FinalBoss.shakeAmt, _FinalBoss.shakeLength);
+        Destroy(_FinalBoss.gameObject);
+    }
+
 }

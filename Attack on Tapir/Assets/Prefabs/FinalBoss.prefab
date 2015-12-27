@@ -28,7 +28,7 @@ GameObject:
   m_Layer: 0
   m_Name: ItemSpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 1319202362, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,8 +44,8 @@ GameObject:
   - 114: {fileID: 11482848}
   - 50: {fileID: 5080020}
   - 114: {fileID: 11442878}
-  - 114: {fileID: 11441360}
   - 60: {fileID: 6039512}
+  - 114: {fileID: 11424766}
   m_Layer: 0
   m_Name: FinalBoss
   m_TagString: Enemy
@@ -162,6 +162,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11424766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d690f3addb502c4ab5c8b57aa5d079d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    maxHealth: 200
+    damage: 50
+  deathParticles: {fileID: 449898, guid: e1b4b57a70258f847bbe91884855f21a, type: 2}
+  reward: {fileID: 447242, guid: b4cf36df04148da42bc5af5f3674af30, type: 2}
+  shakeAmt: 0.1
+  shakeLength: 0.1
+  statusIndicator: {fileID: 11430162}
 --- !u!114 &11430162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,24 +209,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11441360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f45a2703b25431c4db8eacedd1edc8cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats:
-    maxHealth: 200
-    damage: 50
-  deathParticles: {fileID: 449898, guid: e1b4b57a70258f847bbe91884855f21a, type: 2}
-  shakeAmt: 0.1
-  shakeLength: 0.1
-  statusIndicator: {fileID: 11430162}
 --- !u!114 &11442878
 MonoBehaviour:
   m_ObjectHideFlags: 1
