@@ -61,6 +61,7 @@ public class GameMaster : MonoBehaviour
         if (_remainingLives <= 0)
         {
             gm.EndGame();
+            _remainingLives = 3;
         }
         else
         {
