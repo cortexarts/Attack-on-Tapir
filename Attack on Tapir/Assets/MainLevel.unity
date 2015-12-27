@@ -3070,7 +3070,7 @@ MonoBehaviour:
     count: 2
     rate: 1
   - name: Invasion2
-    enemy: {fileID: 414766, guid: 1570f968ae13b194f9571fe832e433c2, type: 2}
+    enemy: {fileID: 427260, guid: 407a37542af46044eb08221ab95989b6, type: 2}
     count: 1
     rate: 1
   spawnPoints:
