@@ -6,7 +6,9 @@ public class GameMaster : MonoBehaviour
 
     public static GameMaster gm;
 
-    private static int _remainingLives = 3;
+    [SerializeField]
+    private int MaxLives = 3;
+    private static int _remainingLives;
     public static int RemainingLives
     {
         get { return _remainingLives; }
@@ -32,6 +34,7 @@ public class GameMaster : MonoBehaviour
 
     void Start()
     {
+        _remainingLives = MaxLives;
         if (cameraShake == null)
         {
             Debug.LogError("No camera shake referenced in GameMaster");
@@ -61,7 +64,6 @@ public class GameMaster : MonoBehaviour
         if (_remainingLives <= 0)
         {
             gm.EndGame();
-            _remainingLives = 3;
         }
         else
         {
