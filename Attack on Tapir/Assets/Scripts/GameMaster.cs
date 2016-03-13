@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class GameMaster : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class GameMaster : MonoBehaviour
     public static GameMaster gm;
 
     [SerializeField]
-    private int MaxLives = 3;
+    private int maxLives = 3;
     private static int _remainingLives;
     public static int RemainingLives
     {
@@ -26,18 +27,30 @@ public class GameMaster : MonoBehaviour
     public Transform spawnPoint;
     public float spawnDelay = 2;
     public Transform spawnPrefab;
+    public string spawnSoundName;
 
     public CameraShake cameraShake;
 
     [SerializeField]
     private GameObject gameOverUI;
 
+    //cache
+    private AudioManager audioManager;
+
     void Start()
     {
-        _remainingLives = MaxLives;
         if (cameraShake == null)
         {
             Debug.LogError("No camera shake referenced in GameMaster");
+        }
+
+        _remainingLives = maxLives;
+
+        //caching
+        audioManager = AudioManager.instance;
+        if (audioManager == null)
+        {
+            Debug.LogError("FREAK OUT! No AudioManager found in the scene.");
         }
     }
 
@@ -49,7 +62,7 @@ public class GameMaster : MonoBehaviour
 
     public IEnumerator _RespawnPlayer()
     {
-        GetComponent<AudioSource>().Play();
+        audioManager.PlaySound(spawnSoundName);
         yield return new WaitForSeconds(spawnDelay);
 
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
