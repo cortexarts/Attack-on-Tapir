@@ -975,6 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d977cd16c552874da36413625393ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseHoverSound: ButtonHover
+  buttonPressSound: ButtonPress
 --- !u!95 &504718359
 Animator:
   serializedVersion: 3
@@ -1012,7 +1014,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: sounds.Array.size
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 464564, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1047,40 +1049,20 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[6].name
-      value: GruntVoice
+      propertyPath: sounds.Array.data[10].name
+      value: LandingFootsteps
       objectReference: {fileID: 0}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[6].clip
+      propertyPath: sounds.Array.data[10].clip
       value: 
-      objectReference: {fileID: 8300000, guid: bc0d668c27e6f2546a7ba795460b12bb, type: 3}
+      objectReference: {fileID: 8300000, guid: b51a6d9d3cc25e04d86ad0c893900257, type: 3}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[6].volume
+      propertyPath: sounds.Array.data[10].volume
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[6].pitch
+      propertyPath: sounds.Array.data[10].pitch
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[7].name
-      value: Spawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[7].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7911930eae7c69341b03142e5e6ea601, type: 3}
-    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[7].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[7].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
-      propertyPath: sounds.Array.data[0].name
-      value: RespawnCountdown
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
@@ -1902,6 +1884,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 504718358}
         m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 504718358}
+        m_MethodName: OnMouseOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

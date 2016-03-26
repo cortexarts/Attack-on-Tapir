@@ -12,6 +12,11 @@ public class PlatformerCharacter2D : MonoBehaviour
 	
 	[SerializeField] bool airControl = false;			// Whether or not a player can steer while jumping;
 	[SerializeField] LayerMask whatIsGround;			// A mask determining what is ground to the character
+
+    [SerializeField]
+    string landingSoundName = "LandingFootsteps";
+
+    AudioManager audioManager;
 	
 	Transform groundCheck;								// A position marking where to check if the player is grounded.
 	float groundedRadius = .2f;							// Radius of the overlap circle to determine if grounded
@@ -34,13 +39,24 @@ public class PlatformerCharacter2D : MonoBehaviour
 			Debug.LogError ("Graphics not found!");
 	}
 
+    void Start() {
+        audioManager = AudioManager.instance;
+        if (audioManager == null) {
+            Debug.LogError("No audiomanager found!");
+        }
+    }
 
 	void FixedUpdate()
 	{
+        bool wasGrounded = grounded;
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
 
+        if (wasGrounded != grounded && grounded == true)
+        { 
+            audioManager.PlaySound(landingSoundName);
+        }
 		// Set the vertical animation
 		anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
 	}
