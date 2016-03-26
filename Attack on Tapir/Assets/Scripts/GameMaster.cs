@@ -4,7 +4,6 @@ using UnityStandardAssets.ImageEffects;
 
 public class GameMaster : MonoBehaviour
 {
-
     public static GameMaster gm;
 
     [SerializeField]
@@ -27,7 +26,10 @@ public class GameMaster : MonoBehaviour
     public Transform spawnPoint;
     public float spawnDelay = 2;
     public Transform spawnPrefab;
-    public string spawnSoundName;
+    public string respawnCountdownSoundName = "RespawnCountdown";
+    public string spawnSoundName = "Spawn";
+
+    public string gameOverSoundName = "GameOver";
 
     public CameraShake cameraShake;
 
@@ -56,15 +58,18 @@ public class GameMaster : MonoBehaviour
 
     public void EndGame()
     {
+        audioManager.PlaySound(gameOverSoundName);
+
         Debug.Log("GAME OVER");
         gameOverUI.SetActive(true);
     }
 
     public IEnumerator _RespawnPlayer()
     {
-        audioManager.PlaySound(spawnSoundName);
+        audioManager.PlaySound(respawnCountdownSoundName);
         yield return new WaitForSeconds(spawnDelay);
 
+        audioManager.PlaySound(spawnSoundName);
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         GameObject clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as GameObject;
         Destroy(clone, 3f);
@@ -90,8 +95,14 @@ public class GameMaster : MonoBehaviour
     }
     public void _KillEnemy(Enemy _enemy)
     {
+        // Let's play some sound
+        audioManager.PlaySound(_enemy.deathSoundName);
+
+        // Add particles
         GameObject _clone = Instantiate(_enemy.deathParticles, _enemy.transform.position, Quaternion.identity) as GameObject;
         Destroy(_clone, 5f);
+
+        // Go camerashake
         cameraShake.Shake(_enemy.shakeAmt, _enemy.shakeLength);
         Destroy(_enemy.gameObject);
     }
@@ -102,9 +113,18 @@ public class GameMaster : MonoBehaviour
     }
     public void _KillFinalBoss(FinalBoss _FinalBoss)
     {
-        GameObject _clone = Instantiate(_FinalBoss.deathParticles, _FinalBoss.transform.position, Quaternion.identity) as GameObject;
+
+        // Spawn reward
         Instantiate(_FinalBoss.reward, _FinalBoss.transform.position, Quaternion.identity);
+
+        // Let's play some sound
+        audioManager.PlaySound(_FinalBoss.deathSoundName);
+
+        // Add particles
+        GameObject _clone = Instantiate(_FinalBoss.deathParticles, _FinalBoss.transform.position, Quaternion.identity) as GameObject;
         Destroy(_clone, 5f);
+
+        // Go camerashake
         cameraShake.Shake(_FinalBoss.shakeAmt, _FinalBoss.shakeLength);
         Destroy(_FinalBoss.gameObject);
     }

@@ -68,6 +68,20 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
     loop: 0
+  - name: DefaultShot
+    clip: {fileID: 8300000, guid: a0f82fad0da3f96408c871b0909361db, type: 3}
+    volume: 0.5
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Explosion
+    clip: {fileID: 8300000, guid: cf2101877c915b74aab5d9039ff14564, type: 3}
+    volume: 0.5
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
