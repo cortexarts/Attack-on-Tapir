@@ -18,6 +18,8 @@
 *.userprefs
 *.pidb
 *.booproj
+*.htm
+*.html
 
 # ============================ #
 # Unity3D generated meta files #
@@ -27,15 +29,15 @@
 # ======================================= #
 # Unity3D Generated File On Crash Reports #
 # ======================================= #
-sysinfo.txt
+*.sysinfo.txt
 
 # ============ #
 # OS generated #
 # ============ #
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+*.DS_Store
+*.DS_Store?
+*._*
+*.Spotlight-V100
+*.Trashes
+*.ehthumbs.db
+*.Thumbs.db
