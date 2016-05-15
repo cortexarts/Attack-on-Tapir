@@ -2,10 +2,9 @@
 2D Platformer made in Unity3D.
 
 To do:
-- Gas dropped by tapir.
-- Rockets dropped by tapir.
-- Machine gun for player.
-- New sprites for player, weapons, tapirs etc.
+- Add farts for tapirs.
+- Fix new weapons for the player.
+- New art style.
 - New background.
 - New platforms.
 
