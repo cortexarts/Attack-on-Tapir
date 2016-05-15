@@ -288,60 +288,39 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11491534, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: whatToHit.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491534, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: BulletTrailPrefab
-      value: 
-      objectReference: {fileID: 400000, guid: 431d8c79cae23d34d83d573a63615fcf, type: 2}
-    - target: {fileID: 11491534, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: HitPrefab
-      value: 
-      objectReference: {fileID: 430476, guid: aacba103bbeb3eb4b9dfdf33cc281275, type: 2}
-    - target: {fileID: 11491534, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: MuzzleFlashPrefab
-      value: 
-      objectReference: {fileID: 400000, guid: 03fe55dca0c422f4abb7a170b98a2401, type: 2}
-    - target: {fileID: 11432834, guid: 4b675480f1f627f47812b81e89276069, type: 2}
-      propertyPath: damageSoundName
-      value: GruntVoice
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8205250, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b675480f1f627f47812b81e89276069, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &235574021
@@ -1069,7 +1048,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &539854359 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 482064, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+  m_PrefabParentObject: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
   m_PrefabInternal: {fileID: 190852113}
 --- !u!1 &543962499
 GameObject:
@@ -1287,6 +1266,14 @@ Prefab:
       propertyPath: backgrounds.Array.data[2]
       value: 
       objectReference: {fileID: 392604669}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 448986, guid: 4b675480f1f627f47812b81e89276069, type: 2}
+    - target: {fileID: 11445020, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: waves.Array.data[1].enemy
+      value: 
+      objectReference: {fileID: 449840, guid: 407a37542af46044eb08221ab95989b6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
   m_IsPrefabParent: 0
