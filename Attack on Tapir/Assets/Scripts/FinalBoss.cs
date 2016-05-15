@@ -58,7 +58,6 @@ public class FinalBoss : MonoBehaviour
         stats.curHealth -= damage;
         if (stats.curHealth <= 0)
         {
-            Debug.Log("Enemy health: " + stats.curHealth);
             GameMaster.KillFinalBoss(this);
         }
 
