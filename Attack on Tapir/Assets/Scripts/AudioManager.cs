@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(this);
+           // DontDestroyOnLoad(this); keep the same songs playing across scenes.
         }
     }
 
