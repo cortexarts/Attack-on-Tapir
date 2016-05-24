@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -0.386, z: 0}
+  m_LocalPosition: {x: 2.3731036, y: 0.41308212, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406310}
@@ -204,11 +204,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 106308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2349eb1eebef04efb83bc9b8ec928005, type: 3}
+  m_Script: {fileID: 11500000, guid: 11cffa7accb3b4e9496f285db829aadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactPrefab: {fileID: 183594, guid: 8dda2546df3c64aa7bc44643cd302950, type: 2}
-  spriteRenderer: {fileID: 21254406}
+  target: {fileID: 0}
+  MissileSpeed: 10
 --- !u!198 &19806310
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1723,7 +1723,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0b9afa57e834641b8b488f817515990d, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1824,7 +1824,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: 815c51127318b43e9bb6e1bf333db895, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
