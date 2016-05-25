@@ -44,6 +44,7 @@ GameObject:
   - 224: {fileID: 22415174}
   - 222: {fileID: 22266206}
   - 114: {fileID: 11473804}
+  - 114: {fileID: 11476618}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -223,7 +224,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 417994}
@@ -427,6 +428,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarRect: {fileID: 22415174}
+--- !u!114 &11476618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11478510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,8 +453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d05236a86bc55a4996d7db07d6e56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-    maxHealth: 100
   fallBoundary: -20
   deathSoundName: DeathVoice
   damageSoundName: GruntVoice

@@ -8,10 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 120: {fileID: 12000000}
-  - 114: {fileID: 11400000}
+  - 212: {fileID: 21200000}
   m_Layer: 0
-  m_Name: BulletTrail
+  m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,55 +28,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11400000
-MonoBehaviour:
+--- !u!212 &21200000
+SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39d1c8700311421498410df28911d8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 230
---- !u!120 &12000000
-LineRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3cdd893fdcfd7914886849a6c3267bf9, type: 2}
+  - {fileID: 2100000, guid: c1116cd61c9630042a72b3e113493585, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -1, y: 0, z: 0}
-  - {x: 5, y: 0, z: 1}
-  m_Parameters:
-    startWidth: .0700000003
-    endWidth: .0700000003
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4283997695
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4283997695
-  m_UseWorldSpace: 1
+  m_Sprite: {fileID: 21300000, guid: 5d4f3e4c4e7f7704bb38f43eb8b2bf35, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c29d6acb1ea2d3b4a81bb8e6a2445aaa
-timeCreated: 1463320434
+timeCreated: 1464208395
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -55,7 +55,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 45
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -68,8 +68,8 @@ TextureImporter:
         y: 68
         width: 24
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.390383, y: 0.44065896}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_1
@@ -79,8 +79,8 @@ TextureImporter:
         y: 71
         width: 36
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3851632, y: 0.38255405}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_2
@@ -90,8 +90,8 @@ TextureImporter:
         y: 69
         width: 67
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.34854627, y: 0.410517}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_3
@@ -101,8 +101,8 @@ TextureImporter:
         y: 65
         width: 84
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40156847, y: 0.35545057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_4
@@ -135,8 +135,8 @@ TextureImporter:
         y: 38
         width: 26
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42772514, y: 0.42841393}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_6
@@ -157,8 +157,8 @@ TextureImporter:
         y: 38
         width: 87
         height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.20735432, y: 0.45578519}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_8
@@ -168,18 +168,18 @@ TextureImporter:
         y: 25
         width: 109
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42759243, y: 0.6480544}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16.5, y: 16.5}
-        - {x: -54.5, y: 7.5}
-        - {x: -54.5, y: -8.5}
-        - {x: -50.5, y: -11.5}
-        - {x: -41.5, y: -16.5}
-        - {x: 54.5, y: -16.5}
-        - {x: 54.5, y: 6.5}
-        - {x: -1.5, y: 16.5}
+      - - {x: -8.607574, y: 11.614204}
+        - {x: -46.607574, y: 2.6142044}
+        - {x: -46.607574, y: -13.385796}
+        - {x: -42.607574, y: -16.385796}
+        - {x: -33.607574, y: -21.385796}
+        - {x: 62.392426, y: -21.385796}
+        - {x: 62.392426, y: 1.6142044}
+        - {x: 6.3924255, y: 11.614204}
     - name: Weapons_9
       rect:
         serializedVersion: 2
@@ -187,8 +187,8 @@ TextureImporter:
         y: 7
         width: 30
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.38725117, y: 0.48210397}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Weapons_10
@@ -198,8 +198,8 @@ TextureImporter:
         y: 6
         width: 54
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4164823, y: 0.36153704}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

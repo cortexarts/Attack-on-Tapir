@@ -152,6 +152,7 @@ MonoBehaviour:
   deathParticles: {fileID: 449898, guid: e1b4b57a70258f847bbe91884855f21a, type: 2}
   shakeAmt: 0.1
   shakeLength: 0.1
+  deathSoundName: Explosion
   statusIndicator: {fileID: 11460414}
 --- !u!114 &11459952
 MonoBehaviour:
@@ -222,7 +223,6 @@ MonoBehaviour:
   drawGizmos: 1
   detailedGizmos: 0
   startEndModifier:
-    priority: 1
     addPoints: 0
     exactStartPoint: 3
     exactEndPoint: 3
