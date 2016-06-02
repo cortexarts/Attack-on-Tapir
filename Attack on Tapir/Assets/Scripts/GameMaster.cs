@@ -43,8 +43,14 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     private GameObject upgradeMenu;
 
+    [SerializeField]
+    private GameObject escapeMenu;
+
     public delegate void UpgradeMenuCallback(bool active);
     public UpgradeMenuCallback onToggleUpgradeMenu;
+
+    public delegate void EscapeMenuCallback(bool active);
+    public EscapeMenuCallback onToggleEscapeMenu;
 
     //cache
     private AudioManager audioManager;
@@ -74,6 +80,16 @@ public class GameMaster : MonoBehaviour
         {
             ToggleUpgradeMenu();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleEscapeMenu();
+        }
+    }
+
+    private void ToggleEscapeMenu()
+    {
+        escapeMenu.SetActive(!escapeMenu.activeSelf);
+        onToggleEscapeMenu.Invoke(escapeMenu.activeSelf);
     }
 
     private void ToggleUpgradeMenu()

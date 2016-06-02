@@ -61,8 +61,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
 	}
 
-
-	public void Move(float move, bool crouch, bool jump)
+    public void Move(float move, bool crouch, bool jump)
 	{
 
 
