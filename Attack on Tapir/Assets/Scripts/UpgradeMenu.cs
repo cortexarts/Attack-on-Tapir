@@ -10,10 +10,10 @@ public class UpgradeMenu : MonoBehaviour {
 	private Text speedText;
 
 	[SerializeField]
-	private float healthMultiplier = 1.3f;
+	private float healthIncremention = 50.0f;
 
 	[SerializeField]
-	private float movementSpeedMultiplier = 1.3f;
+	private float movementSpeedMultiplier = 1.2f;
 
 	private PlayerStats stats;
 
@@ -31,7 +31,7 @@ public class UpgradeMenu : MonoBehaviour {
 
 	public void UpgradeHealth ()
 	{
-		stats.maxHealth = (int)(stats.maxHealth * healthMultiplier);
+		stats.maxHealth = (int)(stats.maxHealth + healthIncremention);
 		UpdateValues();
 	}
 
