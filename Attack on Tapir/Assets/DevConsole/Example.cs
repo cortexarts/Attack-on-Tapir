@@ -12,7 +12,7 @@ public class Example:MonoBehaviour {
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Y", YGravity));
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Z", ZGravity));
 		Console.AddCommand(new Command<string>("EXAMPLE_HELP",ExampleCommand, ExampleCommandHelp));
-	}
+    }
     static void ExampleCommand(string args){
 		Console.Log("Type EXAMPLE_HELP? to use this command");
 	}

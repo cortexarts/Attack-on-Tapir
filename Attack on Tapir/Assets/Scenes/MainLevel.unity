@@ -1619,7 +1619,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11428156, guid: 3ff687a3fbe3de84d9ec9dad822a92a8, type: 2}
       propertyPath: consoleKey
-      value: 96
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428156, guid: 3ff687a3fbe3de84d9ec9dad822a92a8, type: 2}
+      propertyPath: extraSettings.showDebugLog
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ff687a3fbe3de84d9ec9dad822a92a8, type: 2}
@@ -3684,7 +3688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a798e666390ff4490820e13903068b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CountdownFrom: 3
+  CountdownFrom: 0
   CountdownText: {fileID: 651180017}
 --- !u!114 &1312205213
 MonoBehaviour:

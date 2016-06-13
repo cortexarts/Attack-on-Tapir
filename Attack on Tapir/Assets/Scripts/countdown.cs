@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class countdown : MonoBehaviour {
+public class Countdown : MonoBehaviour {
 
     [SerializeField]
     public float CountdownFrom;
