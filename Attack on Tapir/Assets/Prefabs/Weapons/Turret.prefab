@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 471940}
   - 212: {fileID: 21219978}
-  - 114: {fileID: 11434800}
+  - 114: {fileID: 11444126}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Reward
@@ -59,7 +59,7 @@ Transform:
   - {fileID: 410650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11434800
+--- !u!114 &11444126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -70,14 +70,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b6b8e071e7ce94ebde6b23570aa2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
+  fireRate: 4
   Damage: 10
   whatToHit:
     serializedVersion: 2
     m_Bits: 1
-  BulletTrailPrefab: {fileID: 0}
-  HitPrefab: {fileID: 0}
-  MuzzleFlashPrefab: {fileID: 0}
+  BulletTrailPrefab: {fileID: 400000, guid: 431d8c79cae23d34d83d573a63615fcf, type: 2}
+  HitPrefab: {fileID: 430476, guid: aacba103bbeb3eb4b9dfdf33cc281275, type: 2}
+  MuzzleFlashPrefab: {fileID: 400000, guid: 03fe55dca0c422f4abb7a170b98a2401, type: 2}
   effectSpawnRate: 10
   camShakeAmt: 0.05
   camShakeLength: 0.1
