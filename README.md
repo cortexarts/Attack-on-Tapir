@@ -1,15 +1,18 @@
-# Attack-on-Tapir
-2D Platformer made in Unity3D.
+[Attack On Tapir](https://github.com/cortexarts/Attack-on-Tapir)
+==================================================
+
+A 2D platformer created in Unity (engine) and written in C#.
+
+Credits & references:
+--------------------------------------
+
+- **Parallaxing**: http://brackeys.com/preview/2d-platformer-course/ `Asbjørn Thirslund`.
+- **Unity3D**: https://unity3d.com/ `Unity Technologies`.
 
 To do:
-- Add farts for tapirs.
-- Fix new weapons for the player.
-- New art style.
-- New background.
-- New platforms.
+--------------------------------------
+- Add inventory.
+- Fix upgrade menu.
+- Change sprites.
 
-Tutorial assets:
-http://brackeys.com/preview/2d-platformer-course/
-
-Tutorial credits:
-http://brackeys.com/
+Project made by [JasperDre](https://github.com/JasperDre)

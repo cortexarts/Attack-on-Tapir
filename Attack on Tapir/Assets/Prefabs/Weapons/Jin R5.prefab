@@ -24,10 +24,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 439858}
   - 212: {fileID: 21269070}
-  - 114: {fileID: 11467204}
+  - 61: {fileID: 6197928}
+  - 50: {fileID: 5047514}
   m_Layer: 0
   m_Name: Jin R5
-  m_TagString: Untagged
+  m_TagString: Reward
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,6 +42,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.61646515, y: 0.28061754, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 481326}
   m_Father: {fileID: 0}
@@ -54,32 +56,41 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14, y: 0.056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 439858}
   m_RootOrder: 0
---- !u!114 &11467204
-MonoBehaviour:
+--- !u!50 &5047514
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167874}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &6197928
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167874}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b6b8e071e7ce94ebde6b23570aa2ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 4
-  Damage: 20
-  whatToHit:
-    serializedVersion: 2
-    m_Bits: 1
-  BulletTrailPrefab: {fileID: 400000, guid: 431d8c79cae23d34d83d573a63615fcf, type: 2}
-  HitPrefab: {fileID: 430476, guid: aacba103bbeb3eb4b9dfdf33cc281275, type: 2}
-  MuzzleFlashPrefab: {fileID: 400000, guid: 03fe55dca0c422f4abb7a170b98a2401, type: 2}
-  effectSpawnRate: 10
-  camShakeAmt: 0.05
-  camShakeLength: 0.1
-  weaponShootSound: DefaultShot
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f6170596164eae041a52922f3eebb252, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
 --- !u!212 &21269070
 SpriteRenderer:
   m_ObjectHideFlags: 1

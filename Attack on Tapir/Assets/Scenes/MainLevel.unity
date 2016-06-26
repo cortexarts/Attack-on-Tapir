@@ -1891,6 +1891,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: loot.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 11449834, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
       propertyPath: backgrounds.Array.size
       value: 4
@@ -1991,6 +1995,22 @@ Prefab:
       propertyPath: backgrounds.Array.data[3]
       value: 
       objectReference: {fileID: 1005924046}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: loot.Array.data[0]
+      value: 
+      objectReference: {fileID: 432960, guid: cba1c4fb67b9d5044aee9f16a6a84669, type: 2}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: loot.Array.data[1]
+      value: 
+      objectReference: {fileID: 481920, guid: 54d1136644133154da44918ba2311952, type: 2}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: loot.Array.data[3]
+      value: 
+      objectReference: {fileID: 439858, guid: bd2a860d33fb5c7458c7cf77d8c9c590, type: 2}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: loot.Array.data[2]
+      value: 
+      objectReference: {fileID: 442742, guid: 6a17948b79d582146b3efa30e28c74e2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
   m_IsPrefabParent: 0

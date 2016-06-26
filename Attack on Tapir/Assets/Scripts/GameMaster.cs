@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
+using System.Collections.Generic;
 
 public class GameMaster : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class GameMaster : MonoBehaviour
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }
     }
+
+    public List<Transform> loot = new List<Transform>();
 
     public Transform playerPrefab;
     public Transform spawnPoint;
@@ -137,6 +140,10 @@ public class GameMaster : MonoBehaviour
     }
     public void _KillEnemy(Enemy _enemy)
     {
+
+        // Spawn reward
+        Instantiate(loot[Random.Range(0, loot.Count - 1)], transform.position, Quaternion.identity);
+
         // Let's play some sound
         audioManager.PlaySound(_enemy.deathSoundName);
 
