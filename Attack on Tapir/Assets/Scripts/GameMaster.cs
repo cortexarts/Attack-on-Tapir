@@ -7,11 +7,21 @@ public class GameMaster : MonoBehaviour
 {
     public static GameMaster gm;
 
-    private int curLevel = 1;
-    private int maxLevel;
+    [SerializeField]
+    private int maxLevel = 100;
+    public static int _curLevel;
+    public static int CurrentLevel
+    {
+        get { return _curLevel; }
+    }
 
-    public int curExp = 1;
+    [SerializeField]
     private int maxExp = 100;
+    public static int _curExp;
+    public static int CurrentExperience
+    {
+        get { return _curExp; }
+    }
 
     public string LevelUp = "LevelUp";
 
@@ -95,10 +105,10 @@ public class GameMaster : MonoBehaviour
         {
             ToggleEscapeMenu();
         }
-        if (curExp >= maxExp)
+        if (_curExp >= maxExp)
         {
-            curExp = 1;
-            curLevel++;
+            _curExp = 1;
+            _curLevel++;
             audioManager.PlaySound(LevelUp);
         }
     }
@@ -134,11 +144,11 @@ public class GameMaster : MonoBehaviour
         Destroy(clone, 3f);
     }
 
-    void OnGUI()
+    /*void OnGUI()
     {
         GUI.Box(new Rect(850, 500, 200, 20), curExp + " / " + maxExp);
         GUI.Box(new Rect(850, 475, 200, 20), "Level: " + curLevel);
-    }
+    }*/
 
     public static void KillPlayer(Player player)
     {
@@ -168,7 +178,7 @@ public class GameMaster : MonoBehaviour
         audioManager.PlaySound(_enemy.deathSoundName);
 
         //Add experience
-        curExp += 20;
+        _curExp += 20;
 
         // Add particles
         GameObject _clone = Instantiate(_enemy.deathParticles, _enemy.transform.position, Quaternion.identity) as GameObject;
@@ -194,7 +204,7 @@ public static void KillFinalBoss(FinalBoss FinalBoss)
         audioManager.PlaySound(_FinalBoss.deathSoundName);
 
         //Add experience
-        curExp += 40;
+        _curExp += 40;
 
         // Add particles
         GameObject _clone = Instantiate(_FinalBoss.deathParticles, _FinalBoss.transform.position, Quaternion.identity) as GameObject;
