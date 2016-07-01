@@ -105,11 +105,14 @@ public class GameMaster : MonoBehaviour
         {
             ToggleEscapeMenu();
         }
-        if (_curExp >= maxExp)
+        if (_curLevel < maxLevel)
         {
-            _curExp = 1;
-            _curLevel++;
-            audioManager.PlaySound(LevelUp);
+            if (_curExp >= maxExp)
+            {
+                _curExp = 1;
+                _curLevel++;
+                audioManager.PlaySound(LevelUp);
+            }
         }
     }
 
