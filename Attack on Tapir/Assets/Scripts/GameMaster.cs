@@ -147,12 +147,6 @@ public class GameMaster : MonoBehaviour
         Destroy(clone, 3f);
     }
 
-    /*void OnGUI()
-    {
-        GUI.Box(new Rect(850, 500, 200, 20), curExp + " / " + maxExp);
-        GUI.Box(new Rect(850, 475, 200, 20), "Level: " + curLevel);
-    }*/
-
     public static void KillPlayer(Player player)
     {
         Destroy(player.gameObject);
@@ -174,9 +168,13 @@ public class GameMaster : MonoBehaviour
     public void _KillEnemy(Enemy _enemy)
     {
 
-        // Spawn reward
-        Instantiate(loot[Random.Range(0, loot.Count - 1)], transform.position, Quaternion.identity);
+        // Spawn reward with a given percent chance
+        int lootPercentChance = 40;
 
+        if (Random.Range(1, 100) <= lootPercentChance)
+        {
+            Instantiate(loot[Random.Range(0, loot.Count - 1)], _enemy.transform.position, Quaternion.identity);
+        }
         // Let's play some sound
         audioManager.PlaySound(_enemy.deathSoundName);
 
