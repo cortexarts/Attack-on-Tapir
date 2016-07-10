@@ -88,11 +88,4 @@ public class Player : MonoBehaviour
         statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
     }
 
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Reward")
-            Destroy(coll.gameObject);
-    }
-
 }

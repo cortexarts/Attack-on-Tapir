@@ -3,12 +3,7 @@ using System.Collections;
 
 public class WeaponSelect : MonoBehaviour {
 
-	// Use this for initialization
-	/* void Start () {
-	
-	}
-
-    // Update is called once per frame
+    /*
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -49,19 +44,42 @@ public class WeaponSelect : MonoBehaviour {
         }
     }*/
 
-    public GameObject[] weapons; // push your prefabs
+    public GameObject[] weapons; // push the prefabs
 
-    public int currentWeapon = 0;
 
     private int nrWeapons;
 
+    /*Weapons to pick up
+    public bool JinR5 = true;
+    public bool LongshotR1 = false;
+    public bool HollaR4 = false;
+    public bool BlizzR2 = false;
+    public bool HammerR1 = false; */
+
+    public enum WepEnum { JinR5, LongshotR1,  HollaR4,  BlizzR2,  HammerR1};
+    public bool[] weaponState = new bool[WepEnum.GetNames(typeof(WepEnum)).Length];
+
+    public int currentWeapon = (int)WepEnum.JinR5;
+    
     void Start()
     {
+        //for (int i = 0; i < weaponState.Length; i++)
+        foreach (WepEnum wepEnum in WepEnum.GetValues(typeof(WepEnum)))
+        {
+            weaponState[(int)wepEnum] = true;
+        }
+        weaponState[(int)WepEnum.JinR5] = true;
 
         nrWeapons = weapons.Length;
 
-        SwitchWeapon(currentWeapon); // Set default gun
+        SwitchWeapon(currentWeapon); // Set a default gun
 
+    }
+
+    public void setWeapon(GameObject gameObject)
+    {
+        WepEnum wepEnum = (WepEnum)WepEnum.Parse(typeof(WepEnum), gameObject.name);
+        weaponState[(int)wepEnum] = true;
     }
 
     void Update()
@@ -70,10 +88,7 @@ public class WeaponSelect : MonoBehaviour {
         {
             if (Input.GetKeyDown("" + i))
             {
-                currentWeapon = i - 1;
-
-                SwitchWeapon(currentWeapon);
-
+                SwitchWeapon(i - 1);
             }
         }
 
@@ -81,19 +96,11 @@ public class WeaponSelect : MonoBehaviour {
 
     void SwitchWeapon(int index)
     {
-
-        for (int i = 0; i < nrWeapons; i++)
+      if(  weaponState[index])
         {
-            if (i == index)
-            {
-                weapons[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                weapons[i].gameObject.SetActive(false);
-            }
+            weapons[currentWeapon].gameObject.SetActive(false);
+            weapons[index].gameObject.SetActive(true);
+            currentWeapon = index;
         }
     }
-
-
 }

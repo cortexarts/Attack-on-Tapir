@@ -11,12 +11,12 @@ GameObject:
   - 212: {fileID: 21216238}
   - 114: {fileID: 11460232}
   m_Layer: 0
-  m_Name: Blizz R2
-  m_TagString: Reward
+  m_Name: BlizzR2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &103376
 GameObject:
   m_ObjectHideFlags: 1
@@ -62,7 +62,7 @@ GameObject:
   - 114: {fileID: 11415900}
   m_Layer: 0
   m_Name: WeaponContainer
-  m_TagString: Untagged
+  m_TagString: WeaponSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,8 @@ GameObject:
   - 212: {fileID: 21285750}
   - 114: {fileID: 11473674}
   m_Layer: 0
-  m_Name: Hammer R1
-  m_TagString: Reward
+  m_Name: HammerR1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,8 +189,8 @@ GameObject:
   - 212: {fileID: 21230592}
   - 114: {fileID: 11428362}
   m_Layer: 0
-  m_Name: Longshot R1
-  m_TagString: Reward
+  m_Name: LongshotR1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,8 +275,8 @@ GameObject:
   - 212: {fileID: 21285470}
   - 114: {fileID: 11420890}
   m_Layer: 0
-  m_Name: Holla R4
-  m_TagString: Reward
+  m_Name: HollaR4
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,12 +292,12 @@ GameObject:
   - 212: {fileID: 21217330}
   - 114: {fileID: 11484858}
   m_Layer: 0
-  m_Name: Jin R5
-  m_TagString: Reward
+  m_Name: JinR5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &401170
 Transform:
   m_ObjectHideFlags: 1
@@ -620,6 +620,7 @@ MonoBehaviour:
   - {fileID: 192058}
   - {fileID: 102930}
   - {fileID: 125368}
+  weaponState: 0000000000
   currentWeapon: 0
 --- !u!114 &11420146
 MonoBehaviour:

@@ -26,6 +26,7 @@ GameObject:
   - 212: {fileID: 21269070}
   - 61: {fileID: 6197928}
   - 50: {fileID: 5047514}
+  - 114: {fileID: 11429646}
   m_Layer: 0
   m_Name: Jin R5
   m_TagString: Reward
@@ -91,6 +92,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+--- !u!114 &11429646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230124f5d5704bc439a3e2dbd6fa027f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSelector: {fileID: 0}
 --- !u!212 &21269070
 SpriteRenderer:
   m_ObjectHideFlags: 1
