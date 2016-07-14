@@ -1456,7 +1456,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: sounds.Array.size
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 464564, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1557,13 +1557,45 @@ Prefab:
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: sounds.Array.data[13].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7911930eae7c69341b03142e5e6ea601, type: 3}
+      objectReference: {fileID: 8300000, guid: 52fb5a363f636be4f9fc825f8121cc58, type: 3}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: sounds.Array.data[13].volume
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
       propertyPath: sounds.Array.data[13].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[14].name
+      value: NoMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 66646e8bedfe89e439a0229b9b1fd96b, type: 3}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[14].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[14].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[15].name
+      value: EnoughMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 471379ef8da81d9499a91884712f812b, type: 3}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[15].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409246, guid: cff7e83b9d7c0d241b1a0ec32d1e34c9, type: 2}
+      propertyPath: sounds.Array.data[15].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1990,6 +2022,10 @@ Prefab:
       propertyPath: loot.Array.data[4]
       value: 
       objectReference: {fileID: 499052, guid: e42ae27703bb9084e897ae264f426cb9, type: 2}
+    - target: {fileID: 11413848, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
+      propertyPath: waveSpawner
+      value: 
+      objectReference: {fileID: 1811164684}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: def9ce5bc66d27b478245d0b093ea805, type: 2}
   m_IsPrefabParent: 0
@@ -2850,7 +2886,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UPGRADE
+  m_Text: UPGRADE (50 coins)
 --- !u!222 &960602747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4018,7 +4054,8 @@ MonoBehaviour:
   healthText: {fileID: 1605768030}
   speedText: {fileID: 556684376}
   healthIncremention: 50
-  movementSpeedMultiplier: 1.2
+  movementSpeedIncremention: 2
+  upgradeCost: 50
 --- !u!1 &1358974000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,7 +4814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UPGRADE
+  m_Text: UPGRADE (50 coins)
 --- !u!222 &1577651996
 CanvasRenderer:
   m_ObjectHideFlags: 0

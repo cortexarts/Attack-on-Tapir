@@ -67,6 +67,9 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     private GameObject escapeMenu;
 
+    [SerializeField]
+    private WaveSpawner waveSpawner;
+
     public delegate void UpgradeMenuCallback(bool active);
     public UpgradeMenuCallback onToggleUpgradeMenu;
 
@@ -119,6 +122,7 @@ public class GameMaster : MonoBehaviour
     private void ToggleEscapeMenu()
     {
         escapeMenu.SetActive(!escapeMenu.activeSelf);
+        waveSpawner.enabled = !upgradeMenu.activeSelf;
         onToggleEscapeMenu.Invoke(escapeMenu.activeSelf);
     }
 
@@ -178,9 +182,9 @@ public class GameMaster : MonoBehaviour
         // Let's play some sound
         audioManager.PlaySound(_enemy.deathSoundName);
 
-        //Add experience
+        //Add experience and money
         _curExp += 20;
-
+        Money += _enemy.moneyDrop;
         // Add particles
         GameObject _clone = Instantiate(_enemy.deathParticles, _enemy.transform.position, Quaternion.identity) as GameObject;
         Destroy(_clone, 5f);
@@ -204,8 +208,9 @@ public static void KillFinalBoss(FinalBoss FinalBoss)
         // Let's play some sound
         audioManager.PlaySound(_FinalBoss.deathSoundName);
 
-        //Add experience
+        //Add experience and money
         _curExp += 40;
+        Money += _FinalBoss.moneyDrop;
 
         // Add particles
         GameObject _clone = Instantiate(_FinalBoss.deathParticles, _FinalBoss.transform.position, Quaternion.identity) as GameObject;

@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour
 
     public Transform deathParticles;
 
+    public int moneyDrop = 10;
+
     public float shakeAmt = 0.1f;
     public float shakeLength = 0.1f;
 
