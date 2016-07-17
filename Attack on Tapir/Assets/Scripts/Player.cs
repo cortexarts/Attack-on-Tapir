@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         }
 
         GameMaster.gm.onToggleUpgradeMenu += OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu += OnEscapeMenuToggle;
 
         audioManager = AudioManager.instance;
         if (audioManager == null)
@@ -54,6 +55,13 @@ public class Player : MonoBehaviour
             DamagePlayer(9999999);
     }
 
+    void OnEscapeMenuToggle(bool active)
+    {
+        GetComponent<Platformer2DUserControl>().enabled = !active;
+        Weapon _weapon = GetComponentInChildren<Weapon>();
+        if (_weapon != null)
+            _weapon.enabled = !active;
+    }
     void OnUpgradeMenuToggle(bool active)
     {
         GetComponent<Platformer2DUserControl>().enabled = !active;
@@ -65,6 +73,7 @@ public class Player : MonoBehaviour
     void OnDestroy()
     {
         GameMaster.gm.onToggleUpgradeMenu -= OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu -= OnEscapeMenuToggle;
     }
 
     public void DamagePlayer(int damage)

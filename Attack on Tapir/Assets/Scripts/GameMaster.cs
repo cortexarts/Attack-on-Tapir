@@ -122,20 +122,20 @@ public class GameMaster : MonoBehaviour
     private void ToggleEscapeMenu()
     {
         escapeMenu.SetActive(!escapeMenu.activeSelf);
-        waveSpawner.enabled = !upgradeMenu.activeSelf;
+        waveSpawner.enabled = !escapeMenu.activeSelf;
         onToggleEscapeMenu.Invoke(escapeMenu.activeSelf);
     }
 
     private void ToggleUpgradeMenu()
     {
         upgradeMenu.SetActive(!upgradeMenu.activeSelf);
+        waveSpawner.enabled = !upgradeMenu.activeSelf;
         onToggleUpgradeMenu.Invoke(upgradeMenu.activeSelf);
     }
 
     public void EndGame()
     {
         audioManager.PlaySound(gameOverSoundName);
-
         Debug.Log("GAME OVER");
         gameOverUI.SetActive(true);
     }
@@ -144,7 +144,6 @@ public class GameMaster : MonoBehaviour
     {
         audioManager.PlaySound(respawnCountdownSoundName);
         yield return new WaitForSeconds(spawnDelay);
-
         audioManager.PlaySound(spawnSoundName);
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         GameObject clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as GameObject;

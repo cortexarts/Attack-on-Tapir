@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(EnemyAI))]
 public class FinalBoss : MonoBehaviour
 {
 
@@ -29,7 +30,7 @@ public class FinalBoss : MonoBehaviour
     public Transform deathParticles;
     public Transform reward;
 
-    public int moneyDrop = 10;
+    public int moneyDrop = 20;
 
     public float shakeAmt = 0.1f;
     public float shakeLength = 0.1f;
@@ -48,6 +49,9 @@ public class FinalBoss : MonoBehaviour
         {
             statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
         }
+
+        GameMaster.gm.onToggleUpgradeMenu += OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu += OnEscapeMenuToggle;
 
         if (deathParticles == null)
         {
@@ -69,6 +73,15 @@ public class FinalBoss : MonoBehaviour
         }
     }
 
+    void OnUpgradeMenuToggle(bool active)
+    {
+        GetComponent<EnemyAI>().enabled = !active;
+    }
+    void OnEscapeMenuToggle(bool active)
+    {
+        GetComponent<EnemyAI>().enabled = !active;
+    }
+
     void OnCollisionEnter2D(Collision2D _colInfo)
     {
         Player _player = _colInfo.collider.GetComponent<Player>();
@@ -78,5 +91,10 @@ public class FinalBoss : MonoBehaviour
             _player.DamagePlayer(stats.damage);
             DamageEnemy(9999999);
         }
+    }
+    void OnDestroy()
+    {
+        GameMaster.gm.onToggleUpgradeMenu -= OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu -= OnEscapeMenuToggle;
     }
 }

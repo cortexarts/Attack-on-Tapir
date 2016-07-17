@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
         }
 
         GameMaster.gm.onToggleUpgradeMenu += OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu += OnEscapeMenuToggle;
 
         if (deathParticles == null)
         {
@@ -58,6 +59,10 @@ public class Enemy : MonoBehaviour
     }
 
     void OnUpgradeMenuToggle(bool active)
+    {
+        GetComponent<EnemyAI>().enabled = !active;
+    }
+    void OnEscapeMenuToggle(bool active)
     {
         GetComponent<EnemyAI>().enabled = !active;
     }
@@ -89,5 +94,6 @@ public class Enemy : MonoBehaviour
     void OnDestroy()
     {
         GameMaster.gm.onToggleUpgradeMenu -= OnUpgradeMenuToggle;
+        GameMaster.gm.onToggleEscapeMenu -= OnEscapeMenuToggle;
     }
 }
