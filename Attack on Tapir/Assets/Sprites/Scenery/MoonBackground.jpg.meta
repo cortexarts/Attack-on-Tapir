@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: ac6fb64db0e66e0419ec37974d1b6cad
-timeCreated: 1466939535
+guid: 556e91485e5d76b4180c289afef2cf90
+timeCreated: 1470307384
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Space_background_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,7 +26,7 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
@@ -45,27 +44,14 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 22
+  spritePixelsToUnits: 25
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Space_background_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1500
-        height: 750
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -750, y: 375}
-        - {x: -750, y: -375}
-        - {x: 750, y: -375}
-        - {x: 750, y: 375}
+    serializedVersion: 2
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
