@@ -56,11 +56,14 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 18
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: AstronautSpriteAtlas_0
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_0
       rect:
         serializedVersion: 2
         x: 5
@@ -71,7 +74,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_1
       rect:
         serializedVersion: 2
         x: 38
@@ -82,7 +87,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_2
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_2
       rect:
         serializedVersion: 2
         x: 71
@@ -93,7 +100,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_3
       rect:
         serializedVersion: 2
         x: 103
@@ -104,7 +113,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_4
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_4
       rect:
         serializedVersion: 2
         x: 7
@@ -115,7 +126,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_5
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_5
       rect:
         serializedVersion: 2
         x: 38
@@ -126,7 +139,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautSpriteAtlas_6
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautSpriteAtlas_6
       rect:
         serializedVersion: 2
         x: 69
@@ -137,7 +152,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautIdle
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautIdle
       rect:
         serializedVersion: 2
         x: 6
@@ -148,7 +165,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: AstronautJump
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: AstronautJump
       rect:
         serializedVersion: 2
         x: 30
@@ -159,7 +178,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Arm
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Arm
       rect:
         serializedVersion: 2
         x: 57
@@ -170,7 +191,9 @@ TextureImporter:
       pivot: {x: 0.18, y: 0.57}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: MachineGun
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MachineGun
       rect:
         serializedVersion: 2
         x: 77
@@ -181,7 +204,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Pistol
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Pistol
       rect:
         serializedVersion: 2
         x: 77
@@ -192,6 +217,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

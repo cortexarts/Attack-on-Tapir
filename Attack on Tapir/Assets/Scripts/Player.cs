@@ -52,7 +52,17 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (transform.position.y <= fallBoundary)
+        {
             DamagePlayer(9999999);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f && Camera.main.orthographicSize < 16) // backwards
+        {
+            Camera.main.orthographicSize = Camera.main.orthographicSize  + 1;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && Camera.main.orthographicSize > 10) // forward
+        {
+            Camera.main.orthographicSize = Camera.main.orthographicSize - 1;
+        }
     }
 
     void OnEscapeMenuToggle(bool active)
