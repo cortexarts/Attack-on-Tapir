@@ -1,16 +1,16 @@
 fileFormatVersion: 2
 guid: c29d6acb1ea2d3b4a81bb8e6a2445aaa
-timeCreated: 1464208395
+timeCreated: 1470924645
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Weapons_0
-    21300002: Weapons_1
-    21300004: Weapons_2
-    21300006: Weapons_3
-    21300008: Weapons_4
-    21300010: Weapons_5
-    21300012: Weapons_6
+    21300000: Pistol1
+    21300002: SMG1
+    21300004: AssaultRifle1
+    21300006: RocketLauncher1
+    21300008: Pistol2
+    21300010: AssaultRifle2
+    21300012: SniperRifle1
     21300014: Weapons_7
     21300016: Weapons_8
     21300018: Weapons_9
@@ -57,142 +57,103 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 75
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Weapons_0
+    - serializedVersion: 2
+      name: Pistol1
       rect:
         serializedVersion: 2
         x: 5
-        y: 68
-        width: 24
+        y: 40
+        width: 25
         height: 19
-      alignment: 9
-      pivot: {x: 0.390383, y: 0.44065896}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Weapons_1
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SMG1
       rect:
         serializedVersion: 2
         x: 52
-        y: 71
+        y: 43
         width: 36
         height: 16
-      alignment: 9
-      pivot: {x: 0.3851632, y: 0.38255405}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_2
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 69
-        width: 67
-        height: 21
-      alignment: 9
-      pivot: {x: 0.34854627, y: 0.410517}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_3
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 65
-        width: 84
-        height: 26
-      alignment: 9
-      pivot: {x: 0.40156847, y: 0.35545057}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_4
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 18
-        width: 87
-        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 43.5, y: 29}
-        - {x: 15.5, y: 45}
-        - {x: 2.5, y: 45}
-        - {x: 3.5, y: 38}
-        - {x: -43.5, y: 34}
-        - {x: -43.5, y: -5}
-        - {x: -16.5, y: -45}
-        - {x: 19.5, y: -45}
-        - {x: 20.5, y: -43}
-        - {x: 12.5, y: -39}
-        - {x: 43.5, y: 17}
-    - name: Weapons_5
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AssaultRifle1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 41
+        width: 67
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RocketLauncher1
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 47
+        width: 59
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pistol2
       rect:
         serializedVersion: 2
         x: 5
-        y: 38
-        width: 26
+        y: 7
+        width: 31
         height: 21
-      alignment: 9
-      pivot: {x: 0.42772514, y: 0.42841393}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_6
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 35
-        width: 67
-        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Weapons_7
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AssaultRifle2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 9
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SniperRifle1
       rect:
         serializedVersion: 2
         x: 126
-        y: 38
+        y: 10
         width: 87
-        height: 17
-      alignment: 9
-      pivot: {x: 0.20735432, y: 0.45578519}
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Weapons_8
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 25
-        width: 109
-        height: 33
-      alignment: 9
-      pivot: {x: 0.42759243, y: 0.6480544}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_9
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 7
-        width: 30
-        height: 21
-      alignment: 9
-      pivot: {x: 0.38725117, y: 0.48210397}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Weapons_10
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 6
-        width: 54
-        height: 19
-      alignment: 9
-      pivot: {x: 0.4164823, y: 0.36153704}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
