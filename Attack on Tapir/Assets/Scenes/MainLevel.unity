@@ -2112,8 +2112,8 @@ MonoBehaviour:
   - {fileID: 2145798564}
   - {fileID: 862763721}
   - {fileID: 31198317}
-  - {fileID: 31198317}
-  weaponState: 0100000000
+  - {fileID: 1041027497}
+  weaponState: 010000000000
   currentWeapon: 0
 --- !u!1 &701493774
 GameObject:
@@ -2968,6 +2968,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036017275}
+--- !u!1 &1041027497 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013736480564, guid: 09ee8861ba9bcd54eb9224489ef04afb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1705700395}
 --- !u!1 &1043720376
 GameObject:
   m_ObjectHideFlags: 0
