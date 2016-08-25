@@ -12,6 +12,7 @@ public class Example:MonoBehaviour {
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Y", YGravity));
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Z", ZGravity));
 		Console.AddCommand(new Command<string>("EXAMPLE_HELP",ExampleCommand, ExampleCommandHelp));
+        Console.AddCommand(new Command<string>("HARAMBE", DixOut));
     }
     static void ExampleCommand(string args){
 		Console.Log("Type EXAMPLE_HELP? to use this command");
@@ -40,7 +41,13 @@ public class Example:MonoBehaviour {
 		else
 			Console.LogError("The entered value is not a valid float value");
 	}
-	static void ShowTime(string args){
+    
+    static void DixOut(string sValue)
+    {
+        Console.LogError("#DixOutForHarambe");
+    }
+
+    static void ShowTime(string args){
 		Console.Log(Time.time.ToString());
 	}
 
