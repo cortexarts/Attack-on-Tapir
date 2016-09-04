@@ -1,24 +1,34 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using DevConsole;
+using DevConsole;   
 
 public class Example:MonoBehaviour {
 
-	void Start(){
+    float deltaTime = 0.0f;
+    bool displayToggled = false;
+
+    void Start(){
 		Console.AddCommand(new Command<string>("TIME_TIMESCALE", TimeScale));
 		Console.AddCommand(new Command<string>("TIME_SHOWTIME", ShowTime));
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_X", XGravity));
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Y", YGravity));
 		Console.AddCommand(new Command<string>("PHYSICS_GRAVITY_Z", ZGravity));
-		Console.AddCommand(new Command<string>("EXAMPLE_HELP",ExampleCommand, ExampleCommandHelp));
-        Console.AddCommand(new Command<string>("HARAMBE", DixOut));
+		Console.AddCommand(new Command<string>("HELP",DisplayHelp, CommandHelp));
+        Console.AddCommand(new Command<string>("SHOW_FPS", DisplayFPS));
     }
-    static void ExampleCommand(string args){
-		Console.Log("Type EXAMPLE_HELP? to use this command");
+
+    void Update()
+    {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+    }
+
+    static void DisplayHelp(string args){
+		Console.Log("Type DisplayHelp? to use this command");
 	}
-	static void ExampleCommandHelp(){
-		string unColoredText = "The help for this command is shown through a custom method";
+	static void CommandHelp(){
+        
+        string unColoredText = "Command info will be added later";
 		while (unColoredText != string.Empty){
 			string coloredText = string.Empty;
 			int i = 0;
@@ -41,10 +51,31 @@ public class Example:MonoBehaviour {
 		else
 			Console.LogError("The entered value is not a valid float value");
 	}
-    
-    static void DixOut(string sValue)
+
+    void DisplayFPS(string sValue)
     {
-        Console.LogError("#DixOutForHarambe");
+        displayToggled = true;
+        Console.LogError("displayToggled is true");
+    }
+
+    void OnGUI()
+    {
+        if (displayToggled)
+        {
+            
+            int w = Screen.width, h = Screen.height;
+
+            GUIStyle style = new GUIStyle();
+
+        //Rect rect = new Rect(0, 0, w, h * 2 / 100);
+        Rect rect = new Rect(w - 100, 10, 100, 100);
+            style.alignment = TextAnchor.UpperRight;
+            style.fontSize = h * 3 / 100;
+            style.normal.textColor = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            float fps = 1.0f / deltaTime;
+            string text = string.Format("{0:0} FPS", fps);
+            GUI.Label(rect, text, style);
+        }
     }
 
     static void ShowTime(string args){
